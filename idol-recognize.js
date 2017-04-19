@@ -1,3 +1,4 @@
+
 'use latest';
 import { fromExpress } from 'webtask-tools';
 
@@ -7,6 +8,13 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 import request from 'request';
 import rp from 'request-promise';
+import cloudinary from 'cloudinary';
+
+cloudinary.config({
+    cloud_name: 'whoiskp',
+    api_key: '539946942382491',
+    api_secret: '59RH1w8RTF_-6q27ALMhteZ6ayE'
+});
 
 let key = '9ec6c9eaac324270bb425d9ff59908cb'; // Thay bằng key của 
 let idolPerson = [];
@@ -20,6 +28,16 @@ app.use(cors());
 app.post('/', (req, res) => {
   let imageUrl = req.body.url;
   recognize(imageUrl).then(result => {
+    res.status(200).json(result);
+  }).catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
+});
+
+app.post('/imageBase64', (req, res) => {
+  let binData = req.body.binData;
+  recognizeFromImage(binData).then(result => {
     res.status(200).json(result);
   }).catch(err => {
     console.log(err);
@@ -107,6 +125,18 @@ function recognize(imageUrl) {
        return mapResultToIdol(identifiedResult, faces);
     });
 }
+
+// link decode64 upload: https://www.base64-image.de/
+function recognizeFromImage(imageBase64){
+  let imageLinkUpload = "";
+  cloudinary.uploader.upload(imageBase64, function (result) {
+    imageLinkUpload = result.url;
+  });
+   recognize(imageLinkUpload);
+}
+
+
+
 // Thay bằng nội dung trong file idol-person.json của bạn
 idolPerson = [
   {
