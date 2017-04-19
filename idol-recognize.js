@@ -27,25 +27,17 @@ app.use(bodyParser.json());
 app.use(logger('dev'));
 app.use(cors());
 
-app.use(function(req, res, next) {
-  req.rawBody = '';
-  req.setEncoding('utf8');
-
-  req.on('data', function(chunk) { 
-    req.rawBody += chunk;
+app.get('/png/:id', function(){
+  let img = req.params.id;
+  cloudinary.uploader.upload(img, function (result) {
+    console.log(result.url);
+    recognize(result.url).then(result => {
+    res.status(200).json(result);
+  }).catch(err => {
+    console.log(err);
+    res.status(500).json(err);
   });
-
-  req.on('end', function() {
-    next();
   });
-});
-app.use(express.bodyParser());
-
-app.post('/apiImg', function(req, res) {
-  // do something with req.rawBody
-  console.log(req.rawBody);
-  console.log(req.body);
-  // use req.body for the parsed body
 });
 
 app.get('/', function(req, res){
