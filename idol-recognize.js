@@ -128,11 +128,10 @@ function recognize(imageUrl) {
 
 // link decode64 upload: https://www.base64-image.de/
 function recognizeFromImage(imageBase64){
-  let imageLinkUpload = "";
   cloudinary.uploader.upload(imageBase64, function (result) {
-    imageLinkUpload = result.url;
+    console.log(result.url);
   });
-   recognize(imageLinkUpload);
+  // recognize(imageLinkUpload);
 }
 
 
