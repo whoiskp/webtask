@@ -9,6 +9,9 @@ import bodyParser from 'body-parser';
 import request from 'request';
 import rp from 'request-promise';
 import cloudinary from 'cloudinary';
+import multer from 'multer';
+
+
 
 cloudinary.config({
     cloud_name: 'whoiskp',
@@ -37,6 +40,15 @@ app.get('/', function(req, res){
   res.end(JSON.stringify(user["user4"]));
 });
 
+let upload = multer();
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+
+app.post('/profile', upload.array(), function (req, res, next) {
+  console.log(req.body);
+  res.json(req.body);
+});
+
 app.post('/testImg', (req, res) =>{
   let img = req.body;
   cloudinary.uploader.upload(img, function (result) {
@@ -51,6 +63,7 @@ app.post('/testImg', (req, res) =>{
 });
 
 app.post('/api', express.multipart(), function(req, res){
+    req.set();
     var body = req.body.name;
     console.log('body',req.body);
     console.log('req body len', body.length);
