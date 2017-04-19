@@ -57,6 +57,24 @@ app.post('/api', express.multipart(), function(req, res){
     res.send("respond with a resource");
 });
 
+app.post('/raw', (req, res) => {
+
+  // output the headers
+  console.log(req.headers);
+
+  // capture the encoded form data
+  req.on('data', (data) => {
+    console.log(data.toString());
+  });
+
+  // send a response when finished reading
+  // the encoded form data
+  req.on('end', () => {
+    res.send('ok');
+  });
+});
+
+
 app.post('/', (req, res) => {
   let imageUrl = req.body.url;
   recognize(imageUrl).then(result => {
