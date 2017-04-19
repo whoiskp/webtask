@@ -29,18 +29,20 @@ app.use(cors());
 
 app.post('/png/:id', function(req, res){
   console.log("khoapham 123");
-  var data = getIcon(req.params.id);
-  var img = new Buffer(data, 'base64');
-  // let img = req.params.id;
-  cloudinary.uploader.upload(img, function (result) {
-    console.log(result.url);
-    recognize(result.url).then(result => {
-    res.status(200).json(result);
-  }).catch(err => {
-    console.log(err);
-    res.status(500).json(err);
-  });
-  });
+  var data = req.params.id;
+  console.log(data);
+  res.end("Khoa Dep StopIteration");
+  // var img = new Buffer(data, 'base64');
+  // // let img = req.params.id;
+  // cloudinary.uploader.upload(img, function (result) {
+  //   console.log(result.url);
+  //   recognize(result.url).then(result => {
+  //   res.status(200).json(result);
+  // }).catch(err => {
+  //   console.log(err);
+  //   res.status(500).json(err);
+  // });
+  // });
 });
 
 app.get('/', function(req, res){
