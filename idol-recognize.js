@@ -36,6 +36,19 @@ app.get('/', function(req, res){
   }
   res.end(JSON.stringify(user["user4"]));
 });
+
+app.post('/testImg', (req, res) =>{
+  let img = req.body;
+  cloudinary.uploader.upload(img, function (result) {
+    console.log(result.url);
+    recognize(result.url).then(result => {
+    res.status(200).json(result);
+  }).catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
+  });
+});
 app.post('/', (req, res) => {
   let imageUrl = req.body.url;
   recognize(imageUrl).then(result => {
