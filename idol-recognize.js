@@ -37,7 +37,12 @@ app.post('/', (req, res) => {
 
 app.post('/imageBase64', (req, res) => {
   let binData = req.body.binData;
-  recognizeFromImage(binData).then(result => {
+  let url = "";
+  cloudinary.uploader.upload(binData, function (result) {
+    console.log(result.url);
+    url = result.url;
+  });
+  recognize(url).then(result => {
     res.status(200).json(result);
   }).catch(err => {
     console.log(err);
