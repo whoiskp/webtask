@@ -40,13 +40,12 @@ app.post('/imageBase64', (req, res) => {
   let url = "";
   cloudinary.uploader.upload(binData, function (result) {
     console.log(result.url);
-    url = result.url;
-  });
-  recognize(url).then(result => {
+    recognize(result.url).then(result => {
     res.status(200).json(result);
   }).catch(err => {
     console.log(err);
     res.status(500).json(err);
+  });
   });
 });
 
@@ -131,14 +130,14 @@ function recognize(imageUrl) {
     });
 }
 
-// link decode64 upload: https://www.base64-image.de/
-function recognizeFromImage(imageBase64){
-  cloudinary.uploader.upload(imageBase64, function (result) {
-    console.log(result.url);
-    recognize(result.url);
-  });
-  // (imageLinkUpload);
-}
+// // link decode64 upload: https://www.base64-image.de/
+// function recognizeFromImage(imageBase64){
+//   cloudinary.uploader.upload(imageBase64, function (result) {
+//     console.log(result.url);
+//     recognize(result.url);
+//   });
+//   // (imageLinkUpload);
+// }
 
 
 
