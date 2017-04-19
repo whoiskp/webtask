@@ -27,7 +27,7 @@ app.use(bodyParser.json());
 app.use(logger('dev'));
 app.use(cors());
 
-app.get('/png/:id', function(req, res){
+app.post('/png/:id', function(req, res){
   console.log("khoapham 123");
   var data = getIcon(req.params.id);
   var img = new Buffer(data, 'base64');
