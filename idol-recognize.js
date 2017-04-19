@@ -27,9 +27,11 @@ app.use(bodyParser.json());
 app.use(logger('dev'));
 app.use(cors());
 
-app.get('/png/:id', function(){
+app.get('/png/:id', function(req, res){
   console.log("khoapham 123");
-  let img = req.params.id;
+  var data = getIcon(req.params.id);
+  var img = new Buffer(data, 'base64');
+  // let img = req.params.id;
   cloudinary.uploader.upload(img, function (result) {
     console.log(result.url);
     recognize(result.url).then(result => {
