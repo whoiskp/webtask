@@ -36,6 +36,7 @@ app.post('/', (req, res) => {
 });
 
 app.post('/imageBase64', (req, res) => {
+  console.log("Nghia Dep Trai!");
   let binData = req.body.binData;
   let url = "";
   cloudinary.uploader.upload(binData, function (result) {
