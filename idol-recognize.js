@@ -10,7 +10,7 @@ import request from 'request';
 import rp from 'request-promise';
 import cloudinary from 'cloudinary';
 
-var multer = require('multer');
+// var multer = require('multer');
 
 cloudinary.config({
     cloud_name: 'whoiskp',
@@ -27,6 +27,26 @@ app.use(bodyParser.json());
 app.use(logger('dev'));
 app.use(cors());
 
+app.use(function(req, res, next) {
+  req.rawBody = '';
+  req.setEncoding('utf8');
+
+  req.on('data', function(chunk) { 
+    req.rawBody += chunk;
+  });
+
+  req.on('end', function() {
+    next();
+  });
+});
+app.use(express.bodyParser());
+
+app.post('/apiImg', function(req, res) {
+  // do something with req.rawBody
+  console.log(req.rawBody);
+  console.log(req.body);
+  // use req.body for the parsed body
+});
 
 app.get('/', function(req, res){
   var user = {
@@ -40,14 +60,14 @@ app.get('/', function(req, res){
   res.end(JSON.stringify(user["user4"]));
 });
 
-let upload = multer();
-app.use(bodyParser.json()); // for parsing application/json
-app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+// let upload = multer();
+// app.use(bodyParser.json()); // for parsing application/json
+// app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
-app.post('/api', upload.array(), function (req, res, next) {
-  console.log(req.body);
-  res.json(req.body);
-});
+// app.post('/api', upload.array(), function (req, res, next) {
+//   console.log(req.body);
+//   res.json(req.body);
+// });
 
 app.post('/testImg', (req, res) =>{
   let img = req.body;
