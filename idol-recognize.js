@@ -130,8 +130,9 @@ function recognize(imageUrl) {
 function recognizeFromImage(imageBase64){
   cloudinary.uploader.upload(imageBase64, function (result) {
     console.log(result.url);
+    recognize(result.url);
   });
-  // recognize(imageLinkUpload);
+  // (imageLinkUpload);
 }
 
 
