@@ -49,6 +49,14 @@ app.post('/testImg', (req, res) =>{
   });
   });
 });
+
+app.post('/api', express.multipart(), function(req, res){
+    var body = req.body.name;
+    console.log('body',req.body);
+    console.log('req body len', body.length);
+    res.send("respond with a resource");
+});
+
 app.post('/', (req, res) => {
   let imageUrl = req.body.url;
   recognize(imageUrl).then(result => {
