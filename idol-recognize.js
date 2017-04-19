@@ -40,13 +40,25 @@ app.get('/', function(req, res){
   res.end(JSON.stringify(user["user4"]));
 });
 
-let upload = multer();
-app.use(bodyParser.json()); // for parsing application/json
-app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+// let upload = multer();
+// app.use(bodyParser.json()); // for parsing application/json
+// app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
-app.post('/profile', upload.array(), function (req, res, next) {
+// app.post('/profile', upload.array(), function (req, res, next) {
+//   console.log(req.body);
+//   res.json(req.body);
+// });
+
+var options = {
+  inflate: true,
+  limit: '100kb',
+  type: 'application/octet-stream'
+};
+
+app.use(bodyParser.raw(options));
+
+app.post('/api', function(req, res) {
   console.log(req.body);
-  res.json(req.body);
 });
 
 app.post('/testImg', (req, res) =>{
@@ -62,13 +74,13 @@ app.post('/testImg', (req, res) =>{
   });
 });
 
-app.post('/api', express.multipart(), function(req, res){
-    req.set();
-    var body = req.body.name;
-    console.log('body',req.body);
-    console.log('req body len', body.length);
-    res.send("respond with a resource");
-});
+// app.post('/api', express.multipart(), function(req, res){
+//     req.set();
+//     var body = req.body.name;
+//     console.log('body',req.body);
+//     console.log('req body len', body.length);
+//     res.send("respond with a resource");
+// });
 
 app.post('/raw', (req, res) => {
 
