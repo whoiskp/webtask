@@ -28,6 +28,7 @@ app.use(logger('dev'));
 app.use(cors());
 
 app.get('/png/:id', function(){
+  console.log("khoapham 123");
   let img = req.params.id;
   cloudinary.uploader.upload(img, function (result) {
     console.log(result.url);
