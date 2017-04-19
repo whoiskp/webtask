@@ -25,6 +25,17 @@ app.use(bodyParser.json());
 app.use(logger('dev'));
 app.use(cors());
 
+app.get('/', function(req, res){
+  var user = {
+    "user4": {
+        "name": "Nghia",
+        "password": "123123",
+        "job": "Dev",
+        "id": 5
+    }
+  }
+  res.end(JSON.stringify(user["user4"]));
+});
 app.post('/', (req, res) => {
   let imageUrl = req.body.url;
   recognize(imageUrl).then(result => {
@@ -36,7 +47,6 @@ app.post('/', (req, res) => {
 });
 
 app.post('/imageBase64', (req, res) => {
-  console.log("Nghia Dep Trai!");
   let binData = req.body.binData;
   let url = "";
   cloudinary.uploader.upload(binData, function (result) {
@@ -49,6 +59,7 @@ app.post('/imageBase64', (req, res) => {
   });
   });
 });
+
 
 module.exports = fromExpress(app);
 
