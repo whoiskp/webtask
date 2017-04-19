@@ -9,9 +9,6 @@ import bodyParser from 'body-parser';
 import request from 'request';
 import rp from 'request-promise';
 import cloudinary from 'cloudinary';
-import multer from 'multer';
-
-
 
 cloudinary.config({
     cloud_name: 'whoiskp',
