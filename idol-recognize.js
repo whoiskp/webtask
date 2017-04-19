@@ -10,13 +10,15 @@ import request from 'request';
 import rp from 'request-promise';
 import cloudinary from 'cloudinary';
 
+var multer = require('multer');
+
 cloudinary.config({
     cloud_name: 'whoiskp',
     api_key: '539946942382491',
     api_secret: '59RH1w8RTF_-6q27ALMhteZ6ayE'
 });
 
-let key = '9ec6c9eaac324270bb425d9ff59908cb'; // Thay bằng key của 
+let key = '9ec6c9eaac324270bb425d9ff59908cb';
 let idolPerson = [];
 
 const app = express();
@@ -24,6 +26,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(logger('dev'));
 app.use(cors());
+
 
 app.get('/', function(req, res){
   var user = {
@@ -37,25 +40,13 @@ app.get('/', function(req, res){
   res.end(JSON.stringify(user["user4"]));
 });
 
-// let upload = multer();
-// app.use(bodyParser.json()); // for parsing application/json
-// app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+let upload = multer();
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
-// app.post('/profile', upload.array(), function (req, res, next) {
-//   console.log(req.body);
-//   res.json(req.body);
-// });
-
-var options = {
-  inflate: true,
-  limit: '100kb',
-  type: 'application/octet-stream'
-};
-
-app.use(bodyParser.raw(options));
-
-app.post('/api', function(req, res) {
+app.post('/api', upload.array(), function (req, res, next) {
   console.log(req.body);
+  res.json(req.body);
 });
 
 app.post('/testImg', (req, res) =>{
