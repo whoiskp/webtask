@@ -6,10 +6,10 @@ import express from 'express';
 import logger from 'morgan';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-// import request from 'request';
+import request from 'request';
 import rp from 'request-promise';
 import cloudinary from 'cloudinary';
-import request from 'sync-request';
+// import request from 'sync-request';
 
 // var multer = require('multer');
 
@@ -288,7 +288,7 @@ idolPerson = [
       "fd287a7c-a66e-42d4-b5b4-c7d851747997"
     ],
     "name": "Ngọc Trinh",
-    "userData": "1"
+    "userData": { "dob": 1989,"job": "Người Mẫu", "urlImg" : "http://media.phunutoday.vn/files/upload_images/2015/08/26/ngoc-trinh-3.jpg" }
   },
   {
     "personId": "46c4c26d-afe5-4deb-b0b1-4b8ba78801f7",
@@ -318,7 +318,7 @@ idolPerson = [
       "dddd0e74-7709-498e-a441-7c1195c20d01"
     ],
     "name": "Hoàng Thùy Linh",
-    "userData": "4"
+    "userData": { "dob": 1989,"job": "Người Mẫu", "urlImg" : "http://media.phunutoday.vn/files/upload_images/2015/08/26/ngoc-trinh-3.jpg" }
   },
   {
     "personId": "5dd473b2-bf23-4c56-bd76-db3d9cb377e1",
@@ -349,7 +349,7 @@ idolPerson = [
       "e52a5d40-59d0-485c-8a3a-b20906e2d431"
     ],
     "name": "Hoàng Thùy Linh",
-    "userData": "4"
+    "userData": { "dob": 1989,"job": "Người Mẫu", "urlImg" : "http://media.phunutoday.vn/files/upload_images/2015/08/26/ngoc-trinh-3.jpg" }
   },
   {
     "personId": "6a2e179b-1bbd-4165-b805-d0bc4b8439d3",
@@ -366,7 +366,7 @@ idolPerson = [
       "dc7cf811-8017-4520-b750-29adcd8f9e3f"
     ],
     "name": "Khả Ngân",
-    "userData": "11"
+    "userData": { "dob": 1989,"job": "Người Mẫu", "urlImg" : "http://media.phunutoday.vn/files/upload_images/2015/08/26/ngoc-trinh-3.jpg" }
   },
   {
     "personId": "88d6b1f5-5d7d-4bce-b7f6-66281eaefd15",
