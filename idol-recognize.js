@@ -19,6 +19,8 @@ cloudinary.config({
 });
 
 let key = '9ec6c9eaac324270bb425d9ff59908cb';
+let keyBingSearch = 'e2d93eb82fdb4c548602ff461034bdb2';
+
 let idolPerson = [];
 
 const app = express();
@@ -176,6 +178,20 @@ function recognize(imageUrl) {
     });
 }
 
+function getImage(strImg){
+  console.log(`Begin to get Image : ${strImg}`);
+  
+  let url = `https://api.cognitive.microsoft.com/bing/v5.0/images/search?q=${strImg}&count=30`;
+  return rp({
+        method: 'GET',
+        uri: url,
+        headers: {
+            'Ocp-Apim-Subscription-Key': keyBingSearch
+        },
+        json: true
+    });
+}
+
 app.post('/addIdols', function (req, res) {
     console.log(req.body.idols);
     let index = 1;
@@ -184,7 +200,7 @@ app.post('/addIdols', function (req, res) {
     console.log(allIdols);
     // // Lấy ảnh của mỗi idol trong danh sách
     for (let i in allIdols.idols) {
-        // var images = getImage(allIdols.idols[i].name);
+        let images = getImage(allIdols.idols[i].name);
         idolWithImage.push({
             id: index++,
             name: allIdols.idols[i].name,
