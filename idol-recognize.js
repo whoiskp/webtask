@@ -220,29 +220,50 @@ function recognize(imageUrl) {
 //   // (imageLinkUpload);
 // }
 
-
 function getImage(query) {
     console.log(`Begin getting images for ${query}`);
-    var keyBingSearch = 'e2d93eb82fdb4c548602ff461034bdb2'; // Key Subcription Bing Search
-
+    var key = 'e2d93eb82fdb4c548602ff461034bdb2'; // Thay bằng API Key của bạn
+  
     // Gọi API, truyền key vào header, lấy kết quả trả về dạng 
     var url = `https://api.cognitive.microsoft.com/bing/v5.0/images/search?q=${query}&count=30`;
-    
-    console.log(`Finish getting images for ${query}`);
-    return ({
+    var result = fetch(url, {
         method: 'GET',
         uri: url,
         headers: {
-            'Ocp-Apim-Subscription-Key': keyBingSearch
-        },
-        json: true
-    })
-    .then(result.value.map(vl => {
-        return {
-            thumbnail: vl.thumbnailUrl,
-            image: vl.contentUrl
-        };
-    }));
+            'Ocp-Apim-Subscription-Key': key
+        }
+    }).then(rs => rs.json());
+
+    console.log(`Finish getting images for ${query}`);
+
+    // Lọc bớt, chỉ lấy link thumbnail và link ảnh
+    return result.value.map(vl => {
+        return { thumbnail: vl.thumbnailUrl, image: vl.contentUrl };
+    });
+}
+
+// function getImage(query) {
+//     console.log(`Begin getting images for ${query}`);
+//     var keyBingSearch = 'e2d93eb82fdb4c548602ff461034bdb2'; // Key Subcription Bing Search
+
+//     // Gọi API, truyền key vào header, lấy kết quả trả về dạng 
+//     var url = `https://api.cognitive.microsoft.com/bing/v5.0/images/search?q=${query}&count=30`;
+    
+//     console.log(`Finish getting images for ${query}`);
+//     return ({
+//         method: 'GET',
+//         uri: url,
+//         headers: {
+//             'Ocp-Apim-Subscription-Key': keyBingSearch
+//         },
+//         json: true
+//     })
+//     .then(result.value.map(vl => {
+//         return {
+//             thumbnail: vl.thumbnailUrl,
+//             image: vl.contentUrl
+//         };
+//     }));
 
     // console.log(`Finish getting images for ${query}`);
 
