@@ -6,9 +6,10 @@ import express from 'express';
 import logger from 'morgan';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import request from 'request';
+// import request from 'request';
 import rp from 'request-promise';
 import cloudinary from 'cloudinary';
+import request from 'sync-request';
 
 // var multer = require('multer');
 
@@ -125,6 +126,7 @@ app.post('/imageBase64', (req, res) => {
 });
 
 
+
 module.exports = fromExpress(app);
 
 function detect(imageUrl) {
@@ -206,20 +208,32 @@ function recognize(imageUrl) {
     });
 }
 
-// function getImage(strImg){
-//   console.log(`Begin to get Image : ${strImg}`);
-  
-//   let url = `https://api.cognitive.microsoft.com/bing/v5.0/images/search?q=${strImg}&count=30`;
-//   console.log(url);
-//   return rp({
-//         method: 'GET',
-//         uri: url,
-//         headers: {
-//             'Ocp-Apim-Subscription-Key': keyBingSearch
-//         },
-//         json: true
-//     });
-// }
+function getImage(query) {
+    console.log(`Begin getting images for ${query}`);
+
+    // Gọi API, truyền key vào header, lấy kết quả trả về dạng 
+    let url = `https://api.cognitive.microsoft.com/bing/v5.0/images/search?q=${query}&count=30`;
+    var res = request('GET', url, {
+        headers: {
+            'Ocp-Apim-Subscription-Key': keyBingSearch
+        }
+    });
+    // sleep(2000);
+    if (res.statusCode == 200) {
+        var result = JSON.parse(res.getBody('utf8'));
+        console.log(`Finish getting images for ${query}`);
+        console.log(JSON.stringify(result));
+        return result.value.map(vl => {
+            return {
+                thumbnail: vl.thumbnailUrl,
+                image: vl.contentUrl
+            };
+        });
+    } else {
+        console.log('Error');
+        console.log(res.getBody('utf8'));
+    }
+}
 
 app.post('/addIdols', function (req, res) {
     console.log(req.body.idols);
@@ -229,12 +243,12 @@ app.post('/addIdols', function (req, res) {
     console.log(allIdols);
     // // Lấy ảnh của mỗi idol trong danh sách
     for (let i in allIdols.idols) {
-        // let image = getImage(allIdols.idols[i].name);
+        let image = getImage(allIdols.idols[i].name);
         idolWithImage.push({
             id: index++,
             name: allIdols.idols[i].name,
             userData: allIdols.idols[i].userData,
-            // images: image
+            images: image
         });
     }
     console.log(idolWithImage);
