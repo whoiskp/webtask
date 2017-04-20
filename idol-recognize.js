@@ -236,7 +236,7 @@ function getImage(query) {
             'Ocp-Apim-Subscription-Key': keyBingSearch
         },
         json: true
-    }).then(rs => rs.json())
+    })
     .then(result.value.map(vl => {
         return {
             thumbnail: vl.thumbnailUrl,
