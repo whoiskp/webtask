@@ -42,7 +42,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/getListIdol', (req, res) =>{
-   console.log(req.body.idols);
+    console.log(req.body.idols);
     let index = 1;
     let idolList = [];
     
@@ -55,7 +55,20 @@ app.get('/getListIdol', (req, res) =>{
     }
     console.log(idolList);
   
-  res.end(JSON.stringify(idolList));
+    res.end(JSON.stringify(idolList));
+});
+
+app.get('/getCognitive', (req, res) => {
+  let img = req.param('url');
+  cloudinary.uploader.upload(img, function (result) {
+    console.log(result.url);
+    recognize(result.url).then(result => {
+    res.status(200).json(result);
+  }).catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
+  });
 });
 
 app.post('/testImg', (req, res) =>{
