@@ -182,6 +182,7 @@ function getImage(strImg){
   console.log(`Begin to get Image : ${strImg}`);
   
   let url = `https://api.cognitive.microsoft.com/bing/v5.0/images/search?q=${strImg}&count=30`;
+  console.log(url);
   return rp({
         method: 'GET',
         uri: url,
