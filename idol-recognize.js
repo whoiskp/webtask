@@ -262,7 +262,7 @@ app.post('/addIdols', function (req, res) {
     let allIdols = JSON.parse(JSON.stringify(req.body));
     console.log(allIdols);
     // // Lấy ảnh của mỗi idol trong danh sách
-    for (i in allIdols.idols) {
+    for (let i in allIdols.idols) {
         var images = getImage(allIdols.idols[i].name);
         idolWithImage.push({
             id: index++,
