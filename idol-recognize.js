@@ -60,15 +60,17 @@ app.get('/getListIdol', (req, res) =>{
 
 app.get('/getCognitive', (req, res) => {
   let img = req.param('url');
-  cloudinary.uploader.upload(img, function (result) {
-    console.log(result.url);
-    recognize(result.url).then(result => {
-    res.status(200).json(result);
-  }).catch(err => {
-    console.log(err);
-    res.status(500).json(err);
-  });
-  });
+  console.log(img);
+  res.end();
+  // cloudinary.uploader.upload(img, function (result) {
+  //   console.log(result.url);
+  //   recognize(result.url).then(result => {
+  //   res.status(200).json(result);
+  // }).catch(err => {
+  //   console.log(err);
+  //   res.status(500).json(err);
+  // });
+  // });
 });
 
 app.post('/testImg', (req, res) =>{
