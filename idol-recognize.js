@@ -42,7 +42,20 @@ app.get('/', function(req, res){
 });
 
 app.get('/getListIdol', (req, res) =>{
-  res.end(JSON.stringify(idolPerson));
+   console.log(req.body.idols);
+    let index = 1;
+    let idolList = [];
+    
+    for (let i in idolPerson) {
+        // let image = getImage(allIdols.idols[i].name);
+        idolList.push({
+            id: index++,
+            name: idolPerson[i].name
+        });
+    }
+    console.log(idolList);
+  
+  res.end(JSON.stringify(idolList));
 });
 
 app.post('/testImg', (req, res) =>{
