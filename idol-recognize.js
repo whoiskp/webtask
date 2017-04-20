@@ -221,6 +221,62 @@ function recognize(imageUrl) {
 // }
 
 
+function getImage(query) {
+    console.log(`Begin getting images for ${query}`);
+    var keyBingSearch = 'e2d93eb82fdb4c548602ff461034bdb2'; // Key Subcription Bing Search
+
+    // Gọi API, truyền key vào header, lấy kết quả trả về dạng 
+    var url = `https://api.cognitive.microsoft.com/bing/v5.0/images/search?q=${query}&count=30`;
+    
+    console.log(`Finish getting images for ${query}`);
+    return ({
+        method: 'GET',
+        uri: url,
+        headers: {
+            'Ocp-Apim-Subscription-Key': keyBingSearch
+        },
+        json: true
+    }).then(rs => rs.json())
+    .then(result.value.map(vl => {
+        return {
+            thumbnail: vl.thumbnailUrl,
+            image: vl.contentUrl
+        };
+    }));
+
+    // console.log(`Finish getting images for ${query}`);
+
+    // // Lọc bớt, chỉ lấy link thumbnail và link ảnh
+    // return result.value.map(vl => {
+    //     return {
+    //         thumbnail: vl.thumbnailUrl,
+    //         image: vl.contentUrl
+    //     };
+    // });
+}
+
+app.post('/addIdols', function (req, res) {
+    console.log(req.body.idols);
+    let index = 1;
+    let idolWithImage = [];
+    let allIdols = JSON.parse(JSON.stringify(req.body));
+    console.log(allIdols);
+    // // Lấy ảnh của mỗi idol trong danh sách
+    for (i in allIdols.idols) {
+        var images = getImage(allIdols.idols[i].name);
+        idolWithImage.push({
+            id: index++,
+            name: allIdols.idols[i].name,
+            userData: allIdols.idols[i].userData,
+            images: images
+        });
+    }
+    console.log(idolWithImage);
+
+    // // Tải dữ liệu về dưới dạng 
+     res.end(JSON.stringify(idolWithImage));
+});
+
 
 // Thay bằng nội dung trong file idol-person.json của bạn
 idolPerson = [
