@@ -41,6 +41,10 @@ app.get('/', function(req, res){
   res.end(JSON.stringify(user["user4"]));
 });
 
+app.get('/getListIdol', (req, res) =>{
+  res.end(JSON.stringify(idolPerson));
+});
+
 app.post('/testImg', (req, res) =>{
   let img = req.body;
   cloudinary.uploader.upload(img, function (result) {
@@ -178,20 +182,20 @@ function recognize(imageUrl) {
     });
 }
 
-function getImage(strImg){
-  console.log(`Begin to get Image : ${strImg}`);
+// function getImage(strImg){
+//   console.log(`Begin to get Image : ${strImg}`);
   
-  let url = `https://api.cognitive.microsoft.com/bing/v5.0/images/search?q=${strImg}&count=30`;
-  console.log(url);
-  return rp({
-        method: 'GET',
-        uri: url,
-        headers: {
-            'Ocp-Apim-Subscription-Key': keyBingSearch
-        },
-        json: true
-    });
-}
+//   let url = `https://api.cognitive.microsoft.com/bing/v5.0/images/search?q=${strImg}&count=30`;
+//   console.log(url);
+//   return rp({
+//         method: 'GET',
+//         uri: url,
+//         headers: {
+//             'Ocp-Apim-Subscription-Key': keyBingSearch
+//         },
+//         json: true
+//     });
+// }
 
 app.post('/addIdols', function (req, res) {
     console.log(req.body.idols);
@@ -201,18 +205,18 @@ app.post('/addIdols', function (req, res) {
     console.log(allIdols);
     // // Lấy ảnh của mỗi idol trong danh sách
     for (let i in allIdols.idols) {
-        let image = getImage(allIdols.idols[i].name);
+        // let image = getImage(allIdols.idols[i].name);
         idolWithImage.push({
             id: index++,
             name: allIdols.idols[i].name,
             userData: allIdols.idols[i].userData,
-            images: image
+            // images: image
         });
     }
     console.log(idolWithImage);
 
     // // Tải dữ liệu về dưới dạng 
-     res.end(JSON.stringify(idolWithImage));
+    res.end(JSON.stringify(idolWithImage));
 });
 
 
