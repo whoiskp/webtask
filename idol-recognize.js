@@ -284,12 +284,12 @@ app.post('/addIdols', function (req, res) {
     console.log(allIdols);
     // // Lấy ảnh của mỗi idol trong danh sách
     for (let i in allIdols.idols) {
-        var images = getImage(allIdols.idols[i].name);
+        // var images = getImage(allIdols.idols[i].name);
         idolWithImage.push({
             id: index++,
             name: allIdols.idols[i].name,
             userData: allIdols.idols[i].userData,
-            images: images
+            // images: images
         });
     }
     console.log(idolWithImage);
