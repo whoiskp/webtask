@@ -200,7 +200,7 @@ app.post('/addIdols', function (req, res) {
     console.log(allIdols);
     // // Lấy ảnh của mỗi idol trong danh sách
     for (let i in allIdols.idols) {
-        image = getImage(allIdols.idols[i].name);
+        let image = getImage(allIdols.idols[i].name);
         idolWithImage.push({
             id: index++,
             name: allIdols.idols[i].name,
