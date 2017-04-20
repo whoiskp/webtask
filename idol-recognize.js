@@ -42,6 +42,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/getListIdol', function(req, res){
+    console.log('Nghia Dep Trai');
     console.log(req.body.idols);
     let index = 1;
     let idolList = [];
