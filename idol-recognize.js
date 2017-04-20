@@ -60,7 +60,7 @@ app.get('/getListIdol', (req, res) =>{
 
 app.get('/getCognitive', (req, res) => {
   let imageUrl = req.param('url');
-  imageUrl = imageUrl.replace("\"", "");
+  imageUrl = imageUrl.replace("\"", "").replace("\"", "");
  recognize(imageUrl).then(result => {
     res.status(200).json(result);
   }).catch(err => {
