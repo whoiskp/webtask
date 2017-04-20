@@ -27,24 +27,6 @@ app.use(bodyParser.json());
 app.use(logger('dev'));
 app.use(cors());
 
-app.post('/png/:id', function(req, res){
-  console.log("khoapham 123");
-  var data = req.params.id;
-  console.log(data);
-  res.end("Khoa Dep StopIteration");
-  // var img = new Buffer(data, 'base64');
-  // // let img = req.params.id;
-  // cloudinary.uploader.upload(img, function (result) {
-  //   console.log(result.url);
-  //   recognize(result.url).then(result => {
-  //   res.status(200).json(result);
-  // }).catch(err => {
-  //   console.log(err);
-  //   res.status(500).json(err);
-  // });
-  // });
-});
-
 app.get('/', function(req, res){
   var user = {
     "user4": {
@@ -56,15 +38,6 @@ app.get('/', function(req, res){
   }
   res.end(JSON.stringify(user["user4"]));
 });
-
-// let upload = multer();
-// app.use(bodyParser.json()); // for parsing application/json
-// app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
-
-// app.post('/api', upload.array(), function (req, res, next) {
-//   console.log(req.body);
-//   res.json(req.body);
-// });
 
 app.post('/testImg', (req, res) =>{
   let img = req.body;
@@ -78,14 +51,6 @@ app.post('/testImg', (req, res) =>{
   });
   });
 });
-
-// app.post('/api', express.multipart(), function(req, res){
-//     req.set();
-//     var body = req.body.name;
-//     console.log('body',req.body);
-//     console.log('req body len', body.length);
-//     res.send("respond with a resource");
-// });
 
 app.post('/raw', (req, res) => {
 
@@ -209,71 +174,6 @@ function recognize(imageUrl) {
     .then(identifiedResult => {
        return mapResultToIdol(identifiedResult, faces);
     });
-}
-
-// // link decode64 upload: https://www.base64-image.de/
-// function recognizeFromImage(imageBase64){
-//   cloudinary.uploader.upload(imageBase64, function (result) {
-//     console.log(result.url);
-//     recognize(result.url);
-//   });
-//   // (imageLinkUpload);
-// }
-
-function getImage(query) {
-    console.log(`Begin getting images for ${query}`);
-    var key = 'e2d93eb82fdb4c548602ff461034bdb2'; // Thay bằng API Key của bạn
-  
-    // Gọi API, truyền key vào header, lấy kết quả trả về dạng 
-    var url = `https://api.cognitive.microsoft.com/bing/v5.0/images/search?q=${query}&count=30`;
-    var result = fetch(url, {
-        method: 'GET',
-        uri: url,
-        headers: {
-            'Ocp-Apim-Subscription-Key': key
-        }
-    }).then(rs => rs.json());
-
-    console.log(`Finish getting images for ${query}`);
-
-    // Lọc bớt, chỉ lấy link thumbnail và link ảnh
-    return result.value.map(vl => {
-        return { thumbnail: vl.thumbnailUrl, image: vl.contentUrl };
-    });
-}
-
-// function getImage(query) {
-//     console.log(`Begin getting images for ${query}`);
-//     var keyBingSearch = 'e2d93eb82fdb4c548602ff461034bdb2'; // Key Subcription Bing Search
-
-//     // Gọi API, truyền key vào header, lấy kết quả trả về dạng 
-//     var url = `https://api.cognitive.microsoft.com/bing/v5.0/images/search?q=${query}&count=30`;
-    
-//     console.log(`Finish getting images for ${query}`);
-//     return ({
-//         method: 'GET',
-//         uri: url,
-//         headers: {
-//             'Ocp-Apim-Subscription-Key': keyBingSearch
-//         },
-//         json: true
-//     })
-//     .then(result.value.map(vl => {
-//         return {
-//             thumbnail: vl.thumbnailUrl,
-//             image: vl.contentUrl
-//         };
-//     }));
-
-    // console.log(`Finish getting images for ${query}`);
-
-    // // Lọc bớt, chỉ lấy link thumbnail và link ảnh
-    // return result.value.map(vl => {
-    //     return {
-    //         thumbnail: vl.thumbnailUrl,
-    //         image: vl.contentUrl
-    //     };
-    // });
 }
 
 app.post('/addIdols', function (req, res) {
