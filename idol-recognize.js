@@ -319,7 +319,7 @@ idolPerson = [
       "dddd0e74-7709-498e-a441-7c1195c20d01"
     ],
     "name": "Hoàng Thùy Linh",
-    "userData": { "dob": 1989,"job": "Người Mẫu", "urlImg" : "http://media.phunutoday.vn/files/upload_images/2015/08/26/ngoc-trinh-3.jpg" }
+    "userData": { "dob": 1988,"job": "Ca sĩ", "urlImg" : "http://media.phunutoday.vn/files/upload_images/2016/06/12/hoang-thuy-linh-phunutoday1.jpg" }
   },
   {
     "personId": "5dd473b2-bf23-4c56-bd76-db3d9cb377e1",
@@ -350,7 +350,7 @@ idolPerson = [
       "e52a5d40-59d0-485c-8a3a-b20906e2d431"
     ],
     "name": "Hoàng Thùy Linh",
-    "userData": { "dob": 1989,"job": "Người Mẫu", "urlImg" : "http://media.phunutoday.vn/files/upload_images/2015/08/26/ngoc-trinh-3.jpg" }
+    "userData": { "dob": 1988,"job": "Ca sĩ", "urlImg" : "http://media.phunutoday.vn/files/upload_images/2016/06/12/hoang-thuy-linh-phunutoday1.jpg" }
   },
   {
     "personId": "6a2e179b-1bbd-4165-b805-d0bc4b8439d3",
@@ -367,7 +367,7 @@ idolPerson = [
       "dc7cf811-8017-4520-b750-29adcd8f9e3f"
     ],
     "name": "Khả Ngân",
-    "userData": { "dob": 1989,"job": "Người Mẫu", "urlImg" : "http://media.phunutoday.vn/files/upload_images/2015/08/26/ngoc-trinh-3.jpg" }
+    "userData": { "dob": 1997,"job": "Người Mẫu", "urlImg" : "http://nguoinoitieng.vn/photo/tieu-su-kha-ngan-9330.jpg" }
   },
   {
     "personId": "88d6b1f5-5d7d-4bce-b7f6-66281eaefd15",
@@ -396,7 +396,7 @@ idolPerson = [
       "ff0dfd92-c679-4080-87cc-ab2f04a470be"
     ],
     "name": "Tâm Tít",
-    "userData": "7"
+    "userData": { "dob": 1989,"job": "người mẫu ảnh", "urlImg" : "http://media.phunutoday.vn/files/dataimages/201409/20/original/toc-tam-tit-12.jpg" }
   },
   {
     "personId": "9caa9f72-eba1-4889-8854-a529b10fd974",
@@ -423,7 +423,7 @@ idolPerson = [
       "fda21fc5-91f3-4e96-aa99-0756c536b148"
     ],
     "name": "Bà tưng",
-    "userData": "2"
+    "userData": { "dob": 1990,"job": "Hot Girl", "urlImg" : "http://znews-photo.d.za.zdn.vn/w660/Uploaded/nphunsa/2013_09_29/tung.jpg" }
   },
   {
     "personId": "a8a3dedf-92c9-44c6-ab69-3585c5935a16",
@@ -450,7 +450,7 @@ idolPerson = [
       "ee657bd5-0a02-4337-b4e0-b5507fb95a4e"
     ],
     "name": "Elly Trần",
-    "userData": "5"
+    "userData": { "dob": 1987,"job": "Người Mẫu", "urlImg" : "http://starpress.vn/wp-content/uploads/2016/01/lo-dien-nguoi-khien-elly-tran-2-lan-sinh-con-lam-vo-khong-danh-phan2.jpg" }
   },
   {
     "personId": "b36e41ed-0b4e-4a4c-95a8-4d3916609d29",
@@ -478,7 +478,7 @@ idolPerson = [
       "f965bf58-eabd-44d2-9719-e9fd9bac7df6"
     ],
     "name": "Chi Pu",
-    "userData": "10"
+    "userData": { "dob": 1993,"job": "Diễn viên", "urlImg" : "http://zmp3-photo-td.zadn.vn/avatars/b/9/b9355dbc597fa6bd1a2940f55866789a_1473212882.jpg" }
   },
   {
     "personId": "c50d4e74-ded4-466d-b47c-62d7a2ee60da",
@@ -500,7 +500,7 @@ idolPerson = [
       "e60a4259-3334-46e9-92d0-d21aad66468a"
     ],
     "name": "Thuỷ Top",
-    "userData": "6"
+    "userData": { "dob": 1989,"job": "Diễn viên", "urlImg" : "http://kenh14cdn.com/2016/20150105181201-1-1479570531237.jpg" }
   },
   {
     "personId": "d298e4ed-a167-4dbd-92e0-4052ac42cab6",
@@ -530,7 +530,7 @@ idolPerson = [
       "fe55c1eb-bf2d-4db8-aeb5-5d6894413679"
     ],
     "name": "Ngọc Trinh",
-    "userData": "1"
+    "userData": { "dob": 1989,"job": "Người Mẫu", "urlImg" : "http://media.phunutoday.vn/files/upload_images/2015/08/26/ngoc-trinh-3.jpg" }
   },
   {
     "personId": "d5bf00a7-266c-4db4-b5e5-4e778160a2ec",
@@ -557,7 +557,7 @@ idolPerson = [
       "dc64ece3-4833-496f-a064-0ad9770cafe0"
     ],
     "name": "Bà tưng",
-    "userData": "2"
+    "userData": { "dob": 1989,"job": "Người Mẫu", "urlImg" : "http://media.phunutoday.vn/files/upload_images/2015/08/26/ngoc-trinh-3.jpg" }
   },
   {
     "personId": "dd088bcf-6c09-40cf-b59d-c8999055a820",
@@ -589,7 +589,7 @@ idolPerson = [
       "fb3386ce-66b2-4917-9ef8-6a90eafbcf55"
     ],
     "name": "Miu Lê",
-    "userData": "9"
+    "userData": { "dob": 1991,"job": "Ca Sĩ", "urlImg" : "http://nld.vcmedia.vn/k:2015/miule-1450536907797/miu-le-cu-vo-tu-song.jpg" }
   },
   {
     "personId": "ef9d32f5-85d6-42fe-be7d-0d4fd26ea449",
@@ -621,7 +621,7 @@ idolPerson = [
       "f12dda55-2041-489c-ba5e-775bd815b9c2"
     ],
     "name": "Midu",
-    "userData": "8"
+    "userData": { "dob": 1989,"job": "Người Mẫu", "urlImg" : "http://files.tamsugiadinh.vn/ckeditor/2016/11/1478677350_1.jpg" }
   },
   {
     "personId": "ff4636da-6b2b-4914-b0eb-83378baf2d75",
@@ -648,7 +648,7 @@ idolPerson = [
       "f662ce4a-e8a0-48af-bcc4-4aefb5fb05fe"
     ],
     "name": "Hường Hana",
-    "userData": "3"
+    "userData": { "dob": 1989,"job": "Người Mẫu", "urlImg" : "https://media.ngoisao.vn/resize_580/news/2016/01/27/huong-hana-2-ngoisao.vn.stamp2.jpg" }
   },
   {
     "personId": "ffb8daa7-fb43-4a1e-b895-43dcd0191b2d",
@@ -675,6 +675,6 @@ idolPerson = [
       "e6f22029-f930-4f7d-9c0e-d780951788b5"
     ],
     "name": "Hường Hana",
-    "userData": "3"
+    "userData": { "dob": 1989,"job": "Người Mẫu", "urlImg" : "https://media.ngoisao.vn/resize_580/news/2016/01/27/huong-hana-2-ngoisao.vn.stamp2.jpg" }
   }
 ];
