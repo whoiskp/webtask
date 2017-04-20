@@ -51,7 +51,8 @@ app.get('/getListIdol', function(req, res){
     for (let i in idolPerson) {
         idolList.push({
             id: index++,
-            name: idolPerson[i].name
+            name: idolPerson[i].name,
+            userData: idolPerson[i].userData
         });
     }
     console.log(idolList);
