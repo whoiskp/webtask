@@ -41,13 +41,12 @@ app.get('/', function(req, res){
   res.end(JSON.stringify(user["user4"]));
 });
 
-app.get('/getListIdol', (req, res) =>{
+app.get('/getListIdol', function(req, res){
     console.log(req.body.idols);
     let index = 1;
     let idolList = [];
     
     for (let i in idolPerson) {
-        // let image = getImage(allIdols.idols[i].name);
         idolList.push({
             id: index++,
             name: idolPerson[i].name
