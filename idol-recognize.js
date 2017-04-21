@@ -321,37 +321,6 @@ idolPerson = [
     "userData": { "dob": 1988,"job": "Ca sĩ", "urlImg" : "http://media.phunutoday.vn/files/upload_images/2016/06/12/hoang-thuy-linh-phunutoday1.jpg" }
   },
   {
-    "personId": "5dd473b2-bf23-4c56-bd76-db3d9cb377e1",
-    "persistedFaceIds": [
-      "20ed0c2e-ad28-44a6-a519-9a732582caf3",
-      "284be139-02f9-485f-9b86-f5725cfd8238",
-      "2b6a16b6-a1fa-4a8a-be2f-07e09aa85ca4",
-      "393d1ad0-ab3b-4229-b5e2-ce1dce2c7f82",
-      "4144f933-b66e-4fae-9837-3abe08bb4ac5",
-      "47efe42d-ef52-46a3-867d-396703eb12d9",
-      "4a7edede-d7d3-406a-82d7-1766b00c0e65",
-      "519a58ae-b1e9-437f-8121-e89162d1dda1",
-      "55a1c5d6-0d7a-4a1b-8c88-fc6f22e59998",
-      "58fca6a5-dc25-4429-956a-1b6f2ad9a6cd",
-      "5fb4c00f-32c1-43e0-9c1a-40544f85cf80",
-      "7f2f97f8-6b6f-446f-85b3-00dd7c5e1823",
-      "8b70e195-5f0c-452a-99a3-ce76a828e5e7",
-      "907bc84d-eee4-41e7-9611-2182ecb1c270",
-      "a401981c-5c53-4aa7-b67c-39a958eea932",
-      "a5cf0015-d4b4-411e-b20b-3c37644f4655",
-      "a78eb3c0-f016-42ff-9420-e1b219efa16c",
-      "b1111b23-bd0e-4995-a3ae-3e775d2500b4",
-      "b48eb2c4-ecc3-4a08-bc48-ebfb9d87e778",
-      "bd811998-dffa-420d-b0b4-b8a8d511ce4c",
-      "cea2a0ad-038b-4799-beb3-e4815049f1ea",
-      "d93c58a7-07f9-4051-a1c6-2187b5faf503",
-      "e1aecbf0-4fed-4492-a916-24f69f205f26",
-      "e52a5d40-59d0-485c-8a3a-b20906e2d431"
-    ],
-    "name": "Hoàng Thùy Linh",
-    "userData": { "dob": 1988,"job": "Ca sĩ", "urlImg" : "http://media.phunutoday.vn/files/upload_images/2016/06/12/hoang-thuy-linh-phunutoday1.jpg" }
-  },
-  {
     "personId": "6a2e179b-1bbd-4165-b805-d0bc4b8439d3",
     "persistedFaceIds": [
       "0956455f-b3d3-4fb8-8461-a9bd46412715",
@@ -502,36 +471,6 @@ idolPerson = [
     "userData": { "dob": 1989,"job": "Diễn viên", "urlImg" : "http://kenh14cdn.com/2016/20150105181201-1-1479570531237.jpg" }
   },
   {
-    "personId": "d298e4ed-a167-4dbd-92e0-4052ac42cab6",
-    "persistedFaceIds": [
-      "007e57de-b7c5-4798-9df2-73276e52d5d7",
-      "0f3edc94-e6ca-477e-b1e3-68a2c42e2af8",
-      "0f5fdcd8-0633-4e9c-ab9f-75ddfc081d6d",
-      "17fec9f9-0685-4c94-9c45-69a5890ce8b4",
-      "2cae0e01-4252-41b9-9f9b-19416b8654c2",
-      "3180280c-d948-476d-b03e-af00c4a9ac0c",
-      "3a96090c-6d44-4816-afb8-354526eb4da2",
-      "3c7c338d-ed2b-49c1-8da5-2dce3a4533bc",
-      "4197d541-3651-4cfd-a773-c6c4b1c28289",
-      "47b57572-db3f-4714-bc13-b09d49e1c357",
-      "5517c9ba-ef3f-4e7a-892e-8bbfcb7635bb",
-      "63b01c3f-96c7-44e1-867a-b0dcdcdbb197",
-      "7b36544f-e73d-4e93-95aa-a12685253a70",
-      "7e394c57-10f1-4461-b295-7f2b10b91392",
-      "85c555ac-1a99-41c1-a0b7-5c41c4c3fbeb",
-      "8ab1be7d-a7dd-40f8-9174-713a6f245f22",
-      "9abec2a8-26ac-4289-97ef-38db9a1bdc0c",
-      "9d4a3296-e70b-4072-8942-820e5c3a59c2",
-      "a0869527-6754-455e-8d4c-7d842daf0f82",
-      "a6b81e4b-6b35-4d56-af15-10ffa0611dbb",
-      "a7d998a6-c29f-4136-b1fc-d2cac13caf69",
-      "c715eb32-8551-4995-a626-9842e3f60c9f",
-      "fe55c1eb-bf2d-4db8-aeb5-5d6894413679"
-    ],
-    "name": "Ngọc Trinh",
-    "userData": { "dob": 1989,"job": "Người Mẫu", "urlImg" : "http://media.phunutoday.vn/files/upload_images/2015/08/26/ngoc-trinh-3.jpg" }
-  },
-  {
     "personId": "d5bf00a7-266c-4db4-b5e5-4e778160a2ec",
     "persistedFaceIds": [
       "08f82ed7-480f-4521-a8fa-e4d65d2c5e9c",
@@ -645,33 +584,6 @@ idolPerson = [
       "ea161ac3-41cc-4d31-8b60-aeca100b7561",
       "f3cd9d61-d4ea-470b-ac3b-87f9161b4c11",
       "f662ce4a-e8a0-48af-bcc4-4aefb5fb05fe"
-    ],
-    "name": "Hường Hana",
-    "userData": { "dob": 1989,"job": "Người Mẫu", "urlImg" : "https://media.ngoisao.vn/resize_580/news/2016/01/27/huong-hana-2-ngoisao.vn.stamp2.jpg" }
-  },
-  {
-    "personId": "ffb8daa7-fb43-4a1e-b895-43dcd0191b2d",
-    "persistedFaceIds": [
-      "02068783-a8ed-4f00-a5d3-5709d5d33d0a",
-      "0d0f8fb0-37ad-4dcf-885c-c9785d8e653c",
-      "1167c90d-9886-400c-a3fe-61e4342d683d",
-      "2bb8ae28-f1ad-4863-8c97-d1fe14bedc14",
-      "4b7dfd32-90a3-4864-9848-339813073963",
-      "542732a8-7578-46d3-90eb-c6b0f554479c",
-      "57e77569-d97a-46ff-b896-d058c3268998",
-      "6d864afb-8c35-41d4-ab9b-a18c0c534706",
-      "743379ba-c0a2-4613-b861-71f9aaff2fae",
-      "7ca8eb14-803c-432f-bfcb-b2cfffa4d920",
-      "92a9d423-5f47-4ad2-ac6a-894a857d76ed",
-      "954da95c-5836-43fc-ab62-cb841e245add",
-      "a712a110-6747-4e11-b74f-1ed80efb07cf",
-      "aaa310e6-79e1-45d4-ba6a-454da97aa32b",
-      "bc6b6933-ee06-4c85-82a8-17321054cd13",
-      "c0d5b9d7-639d-4982-81c3-983555b6bce4",
-      "c9d122bc-1b07-40ae-9bd3-50346b0aba02",
-      "ca0c6f04-be95-41e2-aa0e-a8a182b4a965",
-      "ddb0b276-f752-48ea-9e43-4da89e16fae8",
-      "e6f22029-f930-4f7d-9c0e-d780951788b5"
     ],
     "name": "Hường Hana",
     "userData": { "dob": 1989,"job": "Người Mẫu", "urlImg" : "https://media.ngoisao.vn/resize_580/news/2016/01/27/huong-hana-2-ngoisao.vn.stamp2.jpg" }
