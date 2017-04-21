@@ -560,5 +560,27 @@ idolPerson = [
     ],
     "name": "Hường Hana",
     "userData": { "dob": 1989,"job": "Người Mẫu", "urlImg" : "https://media.ngoisao.vn/resize_580/news/2016/01/27/huong-hana-2-ngoisao.vn.stamp2.jpg" }
+  },
+  {
+    "personId": "99eea333-762b-4dc5-a476-cfe5a4b155a6",
+    "persistedFaceIds": [
+      "0d819651-8485-46f7-88a3-3eec2fe81aad",
+      "184130d1-0341-4bfa-b9e6-cf4e76c3c19b",
+      "20027d53-76fc-4fa8-ac4b-fdb6b7650681",
+      "4007ba3e-deff-4de9-9edd-4d1ebf803be3",
+      "56c9f3ec-353a-40f8-8c92-6f20d89afebf",
+      "58049c63-b2b3-4341-9ffa-8d445019ac04",
+      "64913da2-52c1-4d98-a62e-9574ecfc1df4",
+      "8981c3d2-05cd-4164-96c8-5ed1d8b49b89",
+      "8b3265d5-e9a0-4e04-85b5-cfee88f7df5a",
+      "8d22d4e6-7f2d-4cf6-8c62-74af03ead6f6",
+      "97af137c-649f-4912-973f-c65184b6c5cd",
+      "aa273579-32a5-4d0e-a36d-e03d203bb432",
+      "df0890b1-c088-4d12-ab5b-80221dca431b",
+      "dff05885-e553-4845-adcc-f7f15ddfbca0",
+      "f3fc470d-0a8f-4d31-bdfa-74ec64f1bc06"
+    ],
+    "name": "Kenny Sang",
+    "userData": { "dob": 1995,"job": "Sinh Viên", "urlImg" : "http://res.cloudinary.com/whoiskp/image/upload/v1492738207/4.jpg.jpg" }
   }
 ];
