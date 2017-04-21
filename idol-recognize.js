@@ -30,20 +30,19 @@ app.use(bodyParser.json());
 app.use(logger('dev'));
 app.use(cors());
 
-app.get('/', function(req, res){
-  var user = {
-    "user4": {
-        "name": "Nghia",
-        "password": "123123",
-        "job": "Dev",
-        "id": 5
-    }
-  }
-  res.end(JSON.stringify(user["user4"]));
-});
+// app.get('/', function(req, res){
+//   var user = {
+//     "user4": {
+//         "name": "Nghia",
+//         "password": "123123",
+//         "job": "Dev",
+//         "id": 5
+//     }
+//   }
+//   res.end(JSON.stringify(user["user4"]));
+// });
 
 app.get('/getListIdol', function(req, res){
-    console.log('Nghia Dep Trai');
     console.log(req.body.idols);
     let index = 1;
     let idolList = [];
