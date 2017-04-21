@@ -471,33 +471,6 @@ idolPerson = [
     "userData": { "dob": 1989,"job": "Diễn viên", "urlImg" : "http://kenh14cdn.com/2016/20150105181201-1-1479570531237.jpg" }
   },
   {
-    "personId": "d5bf00a7-266c-4db4-b5e5-4e778160a2ec",
-    "persistedFaceIds": [
-      "08f82ed7-480f-4521-a8fa-e4d65d2c5e9c",
-      "0c808dea-9486-4ebe-8a26-6b0498d02410",
-      "0ca59dbe-b128-4365-b699-63c4a59dd515",
-      "45f0a2cc-ae86-4ea1-a3a8-a05ec47300b4",
-      "56023fe7-b8de-4a51-b779-69aad64eea1a",
-      "593587e4-839d-4d64-b098-9c72c8328ac7",
-      "5cf4502e-3531-42ff-93be-174e35ec0733",
-      "6f34d463-788f-4e7e-a59a-063dbf56dcc0",
-      "77aa787d-c4a4-4332-9963-3bb228da9e03",
-      "79d48ce2-1189-4cbf-93ae-f05173cc6336",
-      "7e2fcb3b-3c39-43ad-9cd9-7da056d9827e",
-      "8b7b3ce2-ebc1-4bdd-bc7b-a9118f8d6077",
-      "9043f955-07b5-4149-af5e-7008f0a88442",
-      "a2c51a88-07a0-4ed6-8455-e60ff0ad4a8e",
-      "a63f3964-f132-4b8c-a9bd-747760587d16",
-      "c00d1b2a-253c-4af6-b1af-9990d3686f76",
-      "c1bf294f-0a87-4963-9746-5e9f5b1c88f6",
-      "d6cc9f20-f3c8-4f94-8032-58e0fb7be3e1",
-      "d7fe9783-0563-44f2-908e-2b6b4e0a4153",
-      "dc64ece3-4833-496f-a064-0ad9770cafe0"
-    ],
-    "name": "Bà tưng",
-    "userData": { "dob": 1989,"job": "Người Mẫu", "urlImg" : "http://media.phunutoday.vn/files/upload_images/2015/08/26/ngoc-trinh-3.jpg" }
-  },
-  {
     "personId": "dd088bcf-6c09-40cf-b59d-c8999055a820",
     "persistedFaceIds": [
       "0e37e5a5-3cd9-4105-8b3f-135c5c60a242",
